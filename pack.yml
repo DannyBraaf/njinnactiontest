@@ -129,3 +129,28 @@ actions:
         required: false
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
         order: 20
+  GetAdChanges:
+    title: Get AD User Group Changes
+    description: Get AD User Group Changes
+    path: src.actions:GetADchanges
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      days_past:
+        type: text
+        title: Days
+        required: true
+        description: Days to scan for changes subtracted from point of time the action is executed 
+        order: 5
+      server_name:
+        type: text
+        title: Server 
+        required: true
+        description: Server Name or Ip where AD is hosted
+        order: 30
+      properties:
+        type: string
+        title: Properties
+        required: false
+        description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
+        order: 20
