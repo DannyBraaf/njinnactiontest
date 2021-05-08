@@ -129,22 +129,4 @@ actions:
         required: false
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
         order: 20
-  Getadchanges:
-    title: Get AD Changes
-    description: Get AD Domain Group Changes
-    path: src.actions:GetADchanges
-    icon: fab fa-windows
-    platform: windows
-    parameters:
-      days_past:
-        type: text
-        title: Hours in the past to seach
-        required: true
-        description: Past Hours from the time of execution to search 
-        order: 10
-      properties:
-        type: string
-        title: Properties
-        required: false
-        description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
-        order: 20
+
