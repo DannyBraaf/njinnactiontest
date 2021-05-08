@@ -130,22 +130,24 @@ actions:
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
         order: 20
   GetAdChanges:
-    title: Get AD Changes
-    description: Get AD Domain Group Changes
+    title: Get AD User Group Changes
+    description: Get AD User Group Changes
     path: src.actions:GetADchanges
     icon: fab fa-windows
     platform: windows
     parameters:
       days_past:
         type: text
-<<<<<<< Updated upstream
-        title: Hours in the past to seach
-=======
         title: Days in the Past
->>>>>>> Stashed changes
         required: true
-        description: Past Hours from the time of execution to search 
-        order: 10
+        description: Days to scan for changes subtracted from point of time the action is executed 
+        order: 5
+      server_name:
+        type: text
+        title: Server 
+        required: true
+        description: Server Name or Ip where AD is hosted
+        order: 30
       properties:
         type: string
         title: Properties
