@@ -129,4 +129,3 @@ actions:
         required: false
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
         order: 20
-
