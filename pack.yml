@@ -137,7 +137,7 @@ actions:
     platform: windows
     parameters:
       days_past:
-        type: Number
+        type: integer
         title: Days in the Past
         required: true
         description: Days to scan for changes subtracted from point of time the action is executed 
