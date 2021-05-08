@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-$result = Add-ADPrincipalGroupMembership -Identity $object -MemberOf $group -PassThru
-Write-Host "Successfully added '$object' to group '$group'"
-=======
 $DCs = Get-ADDomainController -Filter *  -server $server_name
 
 $startDate = (get-date).AddDays(-$days_past)
@@ -21,4 +17,3 @@ $events = Get-Eventlog -LogName Security -ComputerName $DC.Hostname -after $star
        $result["ADchanges"] += $e.TimeGenerated+"--"+$e.ReplacementStrings[6]+ " made changes to '" +$e.ReplacementStrings[2]+ "' and removed user '" + $e.ReplacementStrings[0] 
     
     }}    
->>>>>>> Stashed changes
