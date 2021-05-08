@@ -137,20 +137,20 @@ actions:
     platform: windows
     parameters:
       days_past:
-        type: text
+        type: int
         title: Days in the Past
         required: true
         description: Days to scan for changes subtracted from point of time the action is executed 
-        order: 5
+        order: 10
       server_name:
-        type: text
+        type: string
         title: Server 
         required: true
         description: Server Name or Ip where AD is hosted
-        order: 30
+        order: 20
       properties:
         type: string
         title: Properties
         required: false
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
-        order: 20
+        order: 30
