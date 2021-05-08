@@ -138,7 +138,7 @@ actions:
     parameters:
       days_past:
         type: text
-        title: Days
+        title: Days in the Past
         required: true
         description: Days to scan for changes subtracted from point of time the action is executed 
         order: 5
