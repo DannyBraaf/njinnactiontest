@@ -130,8 +130,13 @@ actions:
         description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
         order: 20
   GetAdChanges:
+<<<<<<< HEAD
     title: Get AD User Group Changes
     description: Get AD User Group Changes
+=======
+    title: Get AD Changes
+    description: Get AD Domain Group Changes
+>>>>>>> master
     path: src.actions:GetADchanges
     icon: fab fa-windows
     platform: windows
