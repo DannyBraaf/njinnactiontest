@@ -1,0 +1,150 @@
+---
+name: microsoft-ad
+title: Microsoft Active Directory Actions
+description: |
+  Microsoft Active Directory Actions provided by Njinn. 
+  Requires PowerShell Module ActiveDirectory on target.
+actions:
+  CreateUser:
+    title: Create User
+    description: Create Active Directory User
+    path: src.actions:CreateUser
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      name:
+        type: string
+        title: Name
+        required: false
+        description: Name of the user object. At least provide Name, SamAccountName or UPN.
+        order: 10
+      samaccountname:
+        type: string
+        title: SamAccountName
+        required: false
+        description: SamAccountName of the user object. At least provide Name, SamAccountName or UPN.
+        order: 20
+      userprincipalname:
+        type: string
+        title: UPN
+        required: false
+        description: UPN of the user object (<user>@<DNS-domain-name>). At least provide Name, SamAccountName or UPN.
+        order: 30
+      accountpassword:
+        type: secret
+        title: Password
+        required: true
+        description: One time password the user has to change on initial logon.
+        order: 40
+      path:
+        type: string
+        title: Path
+        required: false
+        description: Target path (OU) to place the user object in.
+        order: 50
+      givenname:
+        type: string
+        title: Given name
+        required: false
+        description: Given name of the user
+        order: 100
+      surname:
+        type: string
+        title: Surname
+        required: false
+        description: Surname of the user
+        order: 200
+      displayname:
+        type: string
+        title: Display name
+        required: false
+        description: Display name of the user
+        order: 300
+      description:
+        type: text
+        title: Description
+        required: false
+        description: General description of the user object
+        order: 400
+      otherattributes:
+        type: text
+        title: Other attributes
+        required: false
+        description: Provide any other user object attributes you want to set as Json ( {"title":"Superhero",...})
+        order: 500
+  AddToGroup:
+    title: Add Object to AD Group
+    description: Adds an AD object (user, group, computer, ...) to a group
+    path: src.actions:AddToGroup
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      object:
+        type: string
+        title: Object
+        required: true
+        description: AD object identity (Distinguished name, objectGUID, objectSid or sAMAccountName)
+        order: 10
+      group:
+        type: string
+        title: Group
+        required: true
+        description: AD group identity (Distinguished name, objectGUID, objectSid or sAMAccountName)
+        order: 20
+  SearchUsers:
+    title: Search AD Users
+    description: Search AD for User objects matching an LDAP query
+    path: src.actions:SearchUsers
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      ldap_query:
+        type: text
+        title: LDAP Query
+        required: true
+        description: LDAP query to search for matching AD User objects
+        order: 10
+      properties:
+        type: string
+        title: Properties
+        required: false
+        description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
+        order: 20
+  SearchGroups:
+    title: Search AD Groups
+    description: Search AD for Groups objects matching an LDAP query
+    path: src.actions:SearchGroups
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      ldap_query:
+        type: text
+        title: LDAP Query
+        required: true
+        description: LDAP query to search for matching AD Group objects
+        order: 10
+      properties:
+        type: string
+        title: Properties
+        required: false
+        description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
+        order: 20
+          SearchGroups:
+    title: Get AD Changes
+    description: Get AD Domain Group Changes
+    path: src.actions:GetADchanges
+    icon: fab fa-windows
+    platform: windows
+    parameters:
+      days_past:
+        type: text
+        title: Hours in the past to seach
+        required: true
+        description: Past Hours from the time of execution to search 
+        order: 10
+      properties:
+        type: string
+        title: Properties
+        required: false
+        description: optional comma seperated list of properties to be included besides default set. Use * for all properties.
+        order: 20

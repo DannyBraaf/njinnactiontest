@@ -1,0 +1,8 @@
+* text=input
+* text eol=lf
+
+*.py text diff=python
+*.ps text
+
+*.png binary
+*.jpg binary

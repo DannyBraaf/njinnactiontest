@@ -1,0 +1,14 @@
+*.pyc
+__pycache__
+
+.vscode
+
+.ipynb_checkpoints
+*.ipynb
+
+script.ps1
+njinn_result.json
+
+# Developer's helper scripts for action development
+test*.py
+test*.ps1
