@@ -138,7 +138,11 @@ actions:
     parameters:
       days_past:
         type: text
+<<<<<<< Updated upstream
         title: Hours in the past to seach
+=======
+        title: Days in the Past
+>>>>>>> Stashed changes
         required: true
         description: Past Hours from the time of execution to search 
         order: 10
